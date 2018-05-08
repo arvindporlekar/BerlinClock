@@ -9,7 +9,9 @@ public abstract class BurlinClockBuilder {
 	public static BerlinClock buildBerlinClock(String timeString) {
 		Time time = BerlinClockUtils.getTime(timeString);
 		BerlinClock berlinClock = new BerlinClock();
-		BerlinClockUtils.activateSeconds(berlinClock.getSecondsLamp());
-		return null;
+		BerlinClockUtils.turnOnSecondsLamp(berlinClock,time.getSeconds());
+		BerlinClockUtils.turnOnHoursLamp(berlinClock,time.getHours());
+		BerlinClockUtils.turnOnMinutesLamp(berlinClock,time.getMinutes());
+		return berlinClock;
 	}
 }
