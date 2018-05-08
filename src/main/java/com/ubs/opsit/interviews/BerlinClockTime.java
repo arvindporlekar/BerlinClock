@@ -3,6 +3,10 @@
  */
 package com.ubs.opsit.interviews;
 
+import com.ubs.opsit.model.BerlinClock;
+import com.ubs.opsit.model.Time;
+import com.ubs.opsit.utils.BerlinClockUtils;
+
 /**
  * @author OWNER
  *
@@ -15,7 +19,8 @@ public class BerlinClockTime implements TimeConverter {
 	@Override
 	public String convertTime(String aTime) {
 		
-		return null;
+		BerlinClock berlinClock = BurlinClockBuilder.buildBerlinClock(time); 
+		return berlinClock.toString();
 	}
 
 }

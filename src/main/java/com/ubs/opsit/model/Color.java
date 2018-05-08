@@ -1,7 +1,7 @@
 package com.ubs.opsit.model;
 
 public enum Color {
-	RED("R"), YELLOW("Y");
+	DEFAULT("O"), RED("R"), YELLOW("Y");
 
 	private String colorCode;
 
