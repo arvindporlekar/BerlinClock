@@ -1,11 +1,18 @@
-package com.ubs.opsit.interviews;
+package com.ubs.opsit.model;
 
-public class BerlinClock implements Clock {
+public class BerlinClock {
+	private Lamp secondsLamp;
+	private Row fiveHoursRow;
+	private Row oneHourRow;
+	private Row fiveMinutesRow;
+	private Row oneMinuteRow;
 
-	@Override
-	public Time getBerlinClockTime(String time) {
-		
-		return null;
+	public BerlinClock() {
+		initializeRowLamps();
 	}
 
+	private void initializeRowLamps() {
+		secondsLamp = new 
+		
+	}
 }
