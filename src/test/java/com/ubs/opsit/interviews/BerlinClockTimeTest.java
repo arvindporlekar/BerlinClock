@@ -30,7 +30,6 @@ public class BerlinClockTimeTest {
 	@Test
 	public void testMidNightWith24Hour() {
 		TimeConverter TimeConverter = new BerlinClockTime();
-		System.out.println(TimeConverter.convertTime("24:00:00"));
 		Assert.assertEquals("Y\nRRRR\nRRRR\nOOOOOOOOOOO\nOOOO", TimeConverter.convertTime("24:00:00"));
 	}
 
@@ -49,24 +48,24 @@ public class BerlinClockTimeTest {
 	@Test(expected = IllegalArgumentException.class)
 	public void testInvalidTimeWithWrongFormat() {
 		TimeConverter TimeConverter = new BerlinClockTime();
-		TimeConverter.convertTime("wrongtime");
+		TimeConverter.convertTime("dummyTime");
 	}
 
 	@Test(expected = IllegalArgumentException.class)
 	public void testInvalidHours() {
 		TimeConverter TimeConverter = new BerlinClockTime();
-		TimeConverter.convertTime("27:16:00");
+		TimeConverter.convertTime("32:00:00");
 	}
 
 	@Test(expected = IllegalArgumentException.class)
 	public void testInvalidMinutes() {
 		TimeConverter TimeConverter = new BerlinClockTime();
-		TimeConverter.convertTime("23:75:00");
+		TimeConverter.convertTime("23:62:00");
 	}
 
 	@Test(expected = IllegalArgumentException.class)
 	public void testInvalidSeconds() {
 		TimeConverter TimeConverter = new BerlinClockTime();
-		TimeConverter.convertTime("23:45:70");
+		TimeConverter.convertTime("23:45:62");
 	}
 }

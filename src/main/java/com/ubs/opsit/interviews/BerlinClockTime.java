@@ -24,6 +24,6 @@ public class BerlinClockTime implements TimeConverter {
 
 	public static void main(String[] args) {
 		BerlinClockTime berlinClockTime = new BerlinClockTime();
-		System.out.println(berlinClockTime.convertTime("24:00:00"));
+		System.out.println(berlinClockTime.convertTime("5:5:5"));
 	}
 }

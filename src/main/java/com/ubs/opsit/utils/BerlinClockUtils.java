@@ -40,7 +40,7 @@ public abstract class BerlinClockUtils {
 	 * @param berlinClock
 	 * @param integer
 	 */
-	public static void turnOnMinutesLamp(BerlinClock berlinClock) {
+	public static void turnOnHoursLamp(BerlinClock berlinClock) {
 		Integer fiveHoursLampCount = berlinClock.getBerlinTime().getHours() / 5;
 		Integer oneHoursLampCount = berlinClock.getBerlinTime().getHours() % 5;
 
@@ -57,7 +57,7 @@ public abstract class BerlinClockUtils {
 	 * @param berlinClock
 	 * @param integer
 	 */
-	public static void turnOnHoursLamp(BerlinClock berlinClock) {
+	public static void turnOnMinutesLamp(BerlinClock berlinClock) {
 		Integer fiveMinutesLampCount = berlinClock.getBerlinTime().getMinutes() / 5;
 		Integer oneMinutesLampCount = berlinClock.getBerlinTime().getMinutes() % 5;
 
