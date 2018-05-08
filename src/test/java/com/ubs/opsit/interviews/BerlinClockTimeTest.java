@@ -30,6 +30,7 @@ public class BerlinClockTimeTest {
 	@Test
 	public void testMidNightWith24Hour() {
 		TimeConverter TimeConverter = new BerlinClockTime();
+		System.out.println(TimeConverter.convertTime("24:00:00"));
 		Assert.assertEquals("Y\nRRRR\nRRRR\nOOOOOOOOOOO\nOOOO", TimeConverter.convertTime("24:00:00"));
 	}
 

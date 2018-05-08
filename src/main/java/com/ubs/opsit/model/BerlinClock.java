@@ -1,45 +1,28 @@
 package com.ubs.opsit.model;
 
+import com.ubs.opsit.utils.BerlinClockConstant;
+
 public class BerlinClock {
 	private Lamp secondsLamp;
 	private Row fiveHoursRow;
 	private Row oneHourRow;
 	private Row fiveMinutesRow;
 	private Row oneMinuteRow;
+	private final Time berlinTime;
 
-	public BerlinClock() {
-		initializeFirstSecondsLamps();
-		initializefiveHoursRowLamps();
-		initializeOneHoursRowLamps();
-		initializeFiveMinuteRowLamps();
-		initializeOneMinuteRowLamps();
+	public BerlinClock(Time berlinTime) {
+		this.berlinTime = berlinTime;
+		initializeBerlinClock();
 	}
 
-	private void initializeOneHoursRowLamps() {
-		// TODO Auto-generated method stub
-
+	private void initializeBerlinClock() {
+		this.secondsLamp = new Lamp();
+		this.fiveHoursRow = new Row(BerlinClockConstant.FIVE_HOUR_LAMP_COUNT);
+		this.oneHourRow = new Row(BerlinClockConstant.ONE_HOUR_LAMP_COUNT);
+		this.fiveMinutesRow = new Row(BerlinClockConstant.FIVE_MINUTES_LAMP_COUNT);
+		this.oneMinuteRow = new Row(BerlinClockConstant.ONE_MINUTES_LAMP_COUNT);
 	}
 
-	private void initializeOneMinuteRowLamps() {
-		// TODO Auto-generated method stub
-
-	}
-
-	private void initializeFiveMinuteRowLamps() {
-		// TODO Auto-generated method stub
-
-	}
-
-	private void initializefiveHoursRowLamps() {
-		// TODO Auto-generated method stub
-
-	}
-
-	private void initializeFirstSecondsLamps() {
-		secondsLamp = new Lamp();
-	}
-
-	
 	/**
 	 * @return the secondsLamp
 	 */
@@ -48,7 +31,8 @@ public class BerlinClock {
 	}
 
 	/**
-	 * @param secondsLamp the secondsLamp to set
+	 * @param secondsLamp
+	 *            the secondsLamp to set
 	 */
 	public void setSecondsLamp(Lamp secondsLamp) {
 		this.secondsLamp = secondsLamp;
@@ -62,7 +46,8 @@ public class BerlinClock {
 	}
 
 	/**
-	 * @param fiveHoursRow the fiveHoursRow to set
+	 * @param fiveHoursRow
+	 *            the fiveHoursRow to set
 	 */
 	public void setFiveHoursRow(Row fiveHoursRow) {
 		this.fiveHoursRow = fiveHoursRow;
@@ -76,7 +61,8 @@ public class BerlinClock {
 	}
 
 	/**
-	 * @param oneHourRow the oneHourRow to set
+	 * @param oneHourRow
+	 *            the oneHourRow to set
 	 */
 	public void setOneHourRow(Row oneHourRow) {
 		this.oneHourRow = oneHourRow;
@@ -90,7 +76,8 @@ public class BerlinClock {
 	}
 
 	/**
-	 * @param fiveMinutesRow the fiveMinutesRow to set
+	 * @param fiveMinutesRow
+	 *            the fiveMinutesRow to set
 	 */
 	public void setFiveMinutesRow(Row fiveMinutesRow) {
 		this.fiveMinutesRow = fiveMinutesRow;
@@ -104,10 +91,18 @@ public class BerlinClock {
 	}
 
 	/**
-	 * @param oneMinuteRow the oneMinuteRow to set
+	 * @param oneMinuteRow
+	 *            the oneMinuteRow to set
 	 */
 	public void setOneMinuteRow(Row oneMinuteRow) {
 		this.oneMinuteRow = oneMinuteRow;
+	}
+
+	/**
+	 * @return the berlinTime
+	 */
+	public Time getBerlinTime() {
+		return berlinTime;
 	}
 
 	@Override
@@ -115,5 +110,4 @@ public class BerlinClock {
 		return getSecondsLamp().toString() + "\n" + getFiveHoursRow().toString() + "\n" + getOneHourRow().toString()
 				+ "\n" + getFiveMinutesRow().toString() + "\n" + getOneMinuteRow().toString();
 	}
-
 }

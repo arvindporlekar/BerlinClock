@@ -1,12 +1,16 @@
 package com.ubs.opsit.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Row {
 	private final List<Lamp> lamps;
 
-	public Row(List<Lamp> lamps) {
-		this.lamps = lamps;
+	public Row(Integer lampCount) {
+		this.lamps = new ArrayList<>(lampCount);
+		for (int i = 0; i < lampCount; i++) {
+			this.lamps.add(new Lamp());
+		}
 	}
 
 	/**
