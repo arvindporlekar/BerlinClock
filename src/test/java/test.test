@@ -1,3 +1,295 @@
+###################################################################################################################################################
+You are given an array  of size 
+
+Find the minimum non negative number
+ such that there exist an index  and when you can replace  by , the sum of elements of array from index  to   and to   becomes equal, where
+
+. Assume array to be 1-indexed.
+
+If there is no possible
+ print
+
+in separate line.
+
+Input Format
+
+The first line contains
+, the number of test cases.
+For each Test case :
+The first line contains an integer , size of the array.
+The second line contains  space-separated integers, the of which is
+
+.
+
+Input Constraints
+
+
+
+
+Sum of N all over testcases doesn't not exceed
+
+.
+
+Output Format
+
+For each test case, print the required answer in separate line.
+Sample Input
+
+1
+5
+1 2 3 2 1
+
+Sample Output
+
+3
+
+Explanation
+
+Add 
+ to the
+
+index(1-indexing). 
+Note: Your code should be able to convert the sample input into the sample output. However, this is not enough to pass the challenge, because the code will be run on multiple test cases. Therefore, your code must solve this problem statement.
+
+
+
+
+
+
+###################################################################################################################################################
+
+You are given T tasks to perform. In each task, you are given a string S of length N. You are allowed to select any two indices i and j (i!=j) of the given string and perform exactly one swap between the characters at these indices.
+
+If it is possible to make the new string a palindrome then print "Yes", else print "No".
+
+Note:
+
+A string is said to be palindrome if it reads same as its reverse form. For example: "madam" , "dad" etc.
+
+ 
+
+INPUT
+
+First line contain an integer T denoting total number of tasks to perform.
+
+Each of the following T lines contains a string S.
+
+ 
+
+OUTPUT
+
+For each task, print a single line with "Yes" if it is possible to make palindrome otherwise print "No" without any quotes.
+
+ 
+
+Constraints:
+
+
+String contains only lowercase English alphabets.
+Sample Input
+
+1
+
+bbg
+
+
+
+Sample Output
+
+Yes
+
+Explanation
+
+We can swap indices pair (1,2) [ 0-based ] , so that final string will be "bgb" which is a palindrome.
+
+###################################################################################################################################################
+
+Bob and cities
+
+Bob is living in a city in which houses are arranged in NxM block.
+
+The city is denoted by N strings having M characters such that '.' denotes house while '#' denotes forests.
+
+Bob has to pay a certain amount LCost, RCost, UCost, DCost to move 1 step across left, right, up or down respectively.
+
+Bob lives in a house having co-ordinates (Stx , Sty) (1-Based Indexing).
+
+You are given Q tasks contains an integer X each. In each task, you have to find number of unique houses (including his house) can be travelled using the amount X.
+
+INPUT
+
+First line contains two space separated integers N and M, denoting number of rows and columns respectively.
+
+Next N lines contain a string each containing M characters. (Note :- Top left corner will denote {1,1} )
+
+Next line containd four space separated integers denoting LCost, RCost, UCost, DCost respectively.
+
+Next line contains two space separated integers Stx and Sty, denoting position of Bob's house.
+
+Next line contains an integer Q denoting number of tasks.
+
+Next Q lines contain an integer X each, denoting the amount Bob have.
+
+Output
+
+For each task, output a single integer denoting the number of unique houses (including his house) Bob can visit using the amount X.
+
+Constraint
+
+1 <= N, M <= 1000
+
+1 <= Stx <= N 
+
+1 <= Sty <= M
+
+1 <= LCost, RCost, UCost, DCost <= 109
+
+1 <= Q <= 105
+
+0  <= X <= 1018 
+Sample Input
+
+3 4
+
+..#.
+
+#...
+
+..#.
+
+1 2 3 4
+
+2 3
+
+3
+
+2
+
+5
+
+10
+
+Sample Output
+
+3
+
+7
+
+9
+
+Explanation
+
+As the starting point is {2, 3}.
+
+In first query Bob has 2 units of money. The total number of unique houses that can be visited are (2,3), (2,2), (2,4). Therefore the answer is 3 .
+
+Similarly we can check for other 2 queries.
+Note: Your code should be able to convert the sample input into the sample output. However, this is not enough to pass the challenge, because the code will be run on multiple test cases. Therefore, your code must solve this problem statement.
+
+
+
+
+###################################################################################################################################################
+
+Tree-Stock Market
+
+Mr X is very curious to know about the frequency of stocks. But unfortunately for him, the stocks are represented as nodes of a tree with prices of the stocks as their value. Mr X hates trees as much as he loves to learn about stocks. So he asks for your help:
+
+ Given a tree with N nodes (each node represents a stock) numbered from 1 to N (rooted at 1). Each stock has a price/value which is denoted by Pi. He is very curious so he asks a lot of questions of the form: U L R . For each of his question he wants to know how many different stock prices/values are present in the subtree of U for which frequency is between L and R(Both inclusive).
+
+Constraints :
+
+1<=N,Q,U<=105
+
+1<=L<=R<=105
+
+1<=Pi<=105
+
+INPUT:
+
+The first line contains 2 space seperated integers N and Q, the number of nodes in the tree and the number of queries
+
+Following N-1 lines contains 2 integers a and b denoting an edge between a and b
+
+Next line contains N space seperated integers denoting the value of each node
+
+Following Q lines contains 3 space seperated integers U,L,R
+
+OUTPUT:
+
+Output Q lines containing the answer of each query.
+Sample Input
+
+6 3
+1 2
+1 3
+2 4
+2 5
+5 6
+2 1 2 1 1 2
+2 2 2
+1 2 3
+3 1 4
+
+Sample Output
+
+0
+2
+1
+
+Explanation
+
+0 (1 has frequency 3 and 2 has frequency 1 in the subtree of 2)
+
+2 (1 has freq 3 and 2 has freq 3)
+
+1 (1 has freq 2 and 2 has freq 0)
+Note: Your code should be able to convert the sample input into the sample output. However, this is not enough to pass the challenge, because the code will be run on multiple test cases. Therefore, your code must solve this problem statement.
+
+
+###################################################################################################################################################
+
+Bob and Beauty of the Array
+
+Bob is having a array A  of N elements . Bob wants to determine the beauty of the array and the beauty of the array is defned as :- 
+
+Determine Bitwise OR of maximum and minimum elements  of every subset of size greater than or equal to  2 and add them. 
+
+As the answer can be quite large , you have to report it by taking modulo with 1000000007 .
+
+Input
+
+First line of the input will contain N , denoting the number of elements of the array.
+
+Second line will contain N spaced integers denoting elements of the array .
+
+
+Constraints
+
+Output
+
+For each query you have to output single integer denoting beauty of the array .
+Sample Input
+
+3
+
+2 5 5
+
+Sample Output
+
+26
+
+Explanation
+
+Array contains 3 integers . Thus all subsets having size >= 2 are :- 
+
+{ { 2, 5 } , { 2 , 5} , {5 , 5} , {2 , 5 , 5 } } , thus bitwise OR of the maximum and minimum elements of those subsets are
+
+{ 7 , 7 , 5 , 7 } respectively , thus summation of all is 7 + 7 + 5 + 7 = 26%1000000007 = 26 .
+
+
+###################################################################################################################################################
+
 | Sapient Games Arena — Listing the games developed for different platforms !
 
 [Problem Statement]
